@@ -11,11 +11,13 @@ set( CMAKE_BUILD_TYPE "Debug" )
 # 语法：add_executable( 程序名 源代码文件 ）
 add_executable( helloSLAM helloSLAM.cpp )
 
-# 添加一个库
+# 添加一个库（生成静态库）
 add_library( hello libHelloSLAM.cpp )
-# 共享库
+
+# 添加一个库（生成共享库），共享库更省空间
 add_library( hello_shared SHARED libHelloSLAM.cpp )
 
 add_executable( useHello useHello.cpp )
+
 # 将库文件链接到可执行程序上
 target_link_libraries( useHello hello_shared )
