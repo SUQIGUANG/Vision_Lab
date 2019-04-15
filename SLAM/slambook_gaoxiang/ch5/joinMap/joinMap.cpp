@@ -85,3 +85,7 @@ int main( int argc, char** argv )
     pcl::io::savePCDFileBinary("map.pcd", *pointCloud );
     return 0;
 }
+
+// 在终端使用命令  ./cmake-build-debug/joinMap pose.txt  运行程序
+
+// 生成的pcd文件使用命令  pcl_viewer map.pcd  进行查看
