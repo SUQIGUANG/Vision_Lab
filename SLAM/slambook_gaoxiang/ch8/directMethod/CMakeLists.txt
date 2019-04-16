@@ -7,6 +7,7 @@ set( CMAKE_CXX_FLAGS "-std=c++11 -O3" )
 # 添加cmake模块路径
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules )
 
+set(OpenCV_DIR /opt/ros/kinetic/share/OpenCV-3.3.1-dev)
 find_package( OpenCV )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 

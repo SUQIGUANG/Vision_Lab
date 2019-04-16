@@ -7,7 +7,8 @@ set( CMAKE_CXX_FLAGS "-std=c++11 -O3" )
 # 添加cmake模块以使用g2o
 list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules )
 
-find_package( OpenCV 3.1 REQUIRED )
+set(OpenCV_DIR /opt/ros/kinetic/share/OpenCV-3.3.1-dev)
+find_package( OpenCV 3 REQUIRED )
 # find_package( OpenCV REQUIRED ) # use this if in OpenCV2 
 find_package( G2O REQUIRED )
 find_package( CSparse REQUIRED )
