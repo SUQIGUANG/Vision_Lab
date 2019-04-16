@@ -12,6 +12,7 @@ find_package( Ceres REQUIRED )
 include_directories( ${CERES_INCLUDE_DIRS} )
 
 # OpenCV
+set(OpenCV_DIR /opt/ros/kinetic/share/OpenCV-3.3.1-dev)
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_DIRS} )
 

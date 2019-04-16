@@ -73,10 +73,18 @@ int main( int argc, char** argv )
     
     // 构建图优化，先设定g2o
     typedef g2o::BlockSolver< g2o::BlockSolverTraits<3,1> > Block;  // 每个误差项优化变量维度为3，误差值维度为1
-    Block::LinearSolverType* linearSolver = new g2o::LinearSolverDense<Block::PoseMatrixType>(); // 线性方程求解器
-    Block* solver_ptr = new Block( linearSolver );      // 矩阵块求解器
+
+    // 下面这几行（78-86）由于g2o版本更新的原因会出现错误，参考https://blog.csdn.net/weixin_38358435/article/details/79082733进行修改
+    // Block::LinearSolverType* linearSolver = new g2o::LinearSolverDense<Block::PoseMatrixType>(); // 线性方程求解器
+    std::unique_ptr<Block::LinearSolverType> linearSolver ( new g2o::LinearSolverDense<Block::PoseMatrixType>());
+
+    // Block* solver_ptr = new Block( linearSolver );      // 矩阵块求解器
+    std::unique_ptr<Block> solver_ptr ( new Block ( std::move(linearSolver)));
+
     // 梯度下降方法，从GN, LM, DogLeg 中选
-    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg( solver_ptr );
+    // g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg( solver_ptr );
+    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg ( std::move(solver_ptr));
+
     // g2o::OptimizationAlgorithmGaussNewton* solver = new g2o::OptimizationAlgorithmGaussNewton( solver_ptr );
     // g2o::OptimizationAlgorithmDogleg* solver = new g2o::OptimizationAlgorithmDogleg( solver_ptr );
     g2o::SparseOptimizer optimizer;     // 图模型
@@ -115,3 +123,6 @@ int main( int argc, char** argv )
     
     return 0;
 }
+
+// 运行时会出现错误提示：error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file
+// 这是因为编译器默认加载的库文件不包括/usr/local/lib，需手动添加，具体参考：https://blog.csdn.net/LittleEmperor/article/details/80840198
