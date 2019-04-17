@@ -1,0 +1,7 @@
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/pairwise_icp.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/interactive_icp.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/ndt.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/alignment_prerejective.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/iterative_closest_point.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,12 @@
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/morphologicalFilter_seg.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/difference_of_Normals.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/planar_segmentation.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/min_Cut.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/random_sample_consensus.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/supervoxel.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/cylinder_segmentation.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/region_growing_normal_cur.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/clusters_segmentation.dir
+/home/sqg/Vision_Lab/PCL_Learning/basic/Segmentation/cmake-build-debug/CMakeFiles/color_based.dir

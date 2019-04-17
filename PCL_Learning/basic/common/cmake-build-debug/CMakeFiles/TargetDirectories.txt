@@ -1,0 +1,7 @@
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/concatenate_cloud.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/transform_Point.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/openni_grabber.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/compute_cent.dir
+/home/sqg/code/MVision-master/PCL_APP/Basic/common/cmake-build-debug/CMakeFiles/pcd2ply.dir

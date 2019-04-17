@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="75" />
+    <option name="y" value="24" />
+    <option name="width" value="1612" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.clusters_segmentation">
+    <configuration name="clusters_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="clusters_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="clusters_segmentation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="color_based" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="color_based" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="color_based">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cylinder_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="cylinder_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="cylinder_segmentation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="difference_of_Normals" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="difference_of_Normals" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="difference_of_Normals">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="min_Cut" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="min_Cut" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="min_Cut">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="morphologicalFilter_seg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="morphologicalFilter_seg" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="morphologicalFilter_seg">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="planar_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="planar_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="planar_segmentation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="random_sample_consensus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="random_sample_consensus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="random_sample_consensus">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="region_growing_normal_cur" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="region_growing_normal_cur" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="region_growing_normal_cur">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="supervoxel" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="supervoxel" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="supervoxel">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.clusters_segmentation" />
+      <item itemvalue="Application.color_based" />
+      <item itemvalue="Application.cylinder_segmentation" />
+      <item itemvalue="Application.difference_of_Normals" />
+      <item itemvalue="Application.min_Cut" />
+      <item itemvalue="Application.morphologicalFilter_seg" />
+      <item itemvalue="Application.planar_segmentation" />
+      <item itemvalue="Application.random_sample_consensus" />
+      <item itemvalue="Application.region_growing_normal_cur" />
+      <item itemvalue="Application.supervoxel" />
+    </list>
+  </component>
+</project>
