@@ -22,18 +22,9 @@
   <component name="ChangeListManager">
     <list default="true" id="53769128-f954-49f6-8cf8-7b0ea7dad895" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervoxel_clustering.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/supervoxel_clustering.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/bspline_fitting.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/bun0.pcd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/bunny.pcd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/convex_hull2d.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/greedy_projection.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/recon_marchingCubes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/recon_poisson.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/resampling.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Surface/table_scene_mug_stereo_textured.pcd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/min_Cut.dir/min_Cut_Based_Segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/min_Cut.dir/min_Cut_Based_Segmentation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/min_Cut" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/min_Cut" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,18 +75,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264" />
+            <state relative-caret-position="151">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/random_sample_consensus.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/region_growing_normal_cur.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/planar_segmentation.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supervoxel_clustering.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
+            <state relative-caret-position="220">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding>
                 <element signature="e#641#671#0" expanded="true" />
               </folding>
@@ -112,6 +128,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/supervoxel_clustering.cpp" />
+        <option value="$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp" />
       </list>
     </option>
   </component>
@@ -159,7 +176,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.difference_of_Normals">
+  <component name="RunManager" selected="Application.region_growing_normal_cur">
     <configuration name="clusters_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="clusters_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="clusters_segmentation">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -233,19 +250,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555485116897</updated>
-      <workItem from="1555485118434" duration="3616000" />
+      <workItem from="1555485118434" duration="5256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3616000" />
+    <option name="totallyTimeSpent" value="5256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1269" height="1416" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22768223" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22768223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
@@ -255,7 +272,7 @@
       <window_info anchor="bottom" id="CMake" weight="0.32996893" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35326087" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35326087" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -274,16 +291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervoxel_clustering.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="92" column="33" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="33" />
-          <folding>
-            <element signature="e#641#671#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -313,7 +320,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
+        <state relative-caret-position="151">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/region_growing_normal_cur.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planar_segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_sample_consensus.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervoxel_clustering.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#641#671#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

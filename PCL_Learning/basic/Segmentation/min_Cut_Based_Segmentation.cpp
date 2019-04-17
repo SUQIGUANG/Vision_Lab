@@ -59,7 +59,7 @@ main(int argc, char** argv)
     // 法线
     pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
 
-    if (pcl::io::loadPCDFile<pcl::PointXYZ>("../min_Cut_Based.pcd", *cloud) != 0)
+    if (pcl::io::loadPCDFile<pcl::PointXYZ>("../min_cut_segmentation_tutorial.pcd", *cloud) != 0)
     {
         return -1;
     }
