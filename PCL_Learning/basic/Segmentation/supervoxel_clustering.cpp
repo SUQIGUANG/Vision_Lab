@@ -97,7 +97,7 @@ main (int argc, char ** argv)
 //如何使用SupervoxelClustering函数
   pcl::SupervoxelClustering<PointT> super (voxel_resolution, seed_resolution);
   if (disable_transform)//如果设置的是参数--NT  就用默认的参数
-  super.setUseSingleCameraTransform (false);
+//super.setUseSingleCameraTransform (false);
   super.setInputCloud (cloud);
   super.setColorImportance (color_importance); //0.2f
   super.setSpatialImportance (spatial_importance); //0.4f
@@ -118,7 +118,7 @@ main (int argc, char ** argv)
   viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_OPACITY,0.95, "voxel centroids");
 
   PointLCloudT::Ptr labeled_voxel_cloud = super.getLabeledVoxelCloud ();
-  viewer->addPointCloud (labeled_voxel_cloud, "labeled voxels");
+//viewer->addPointCloud (labeled_voxel_cloud, "labeled voxels");
   viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_OPACITY,0.8, "labeled voxels");
 
   PointNCloudT::Ptr sv_normal_cloud = super.makeSupervoxelNormalCloud (supervoxel_clusters);
