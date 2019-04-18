@@ -23,6 +23,7 @@
     <list default="true" id="53769128-f954-49f6-8cf8-7b0ea7dad895" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clusters_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/clusters_segmentation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,10 +36,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clusters_segmentation.cpp">
+        <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+            <state relative-caret-position="408">
+              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+              <folding>
+                <element signature="e#462#481#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,6 +58,7 @@
         <option value="$PROJECT_DIR$/supervoxel_clustering.cpp" />
         <option value="$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp" />
         <option value="$PROJECT_DIR$/clusters_segmentation.cpp" />
+        <option value="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" />
       </list>
     </option>
   </component>
@@ -102,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.clusters_segmentation">
+  <component name="RunManager" selected="Application.color_based">
     <configuration name="clusters_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="clusters_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="clusters_segmentation">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -178,12 +183,12 @@
       <updated>1555485116897</updated>
       <workItem from="1555485118434" duration="5308000" />
       <workItem from="1555551335160" duration="11410000" />
-      <workItem from="1555575508778" duration="5902000" />
+      <workItem from="1555575508778" duration="9098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22620000" />
+    <option name="totallyTimeSpent" value="25816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,7 +203,7 @@
     <frame x="75" y="24" width="1730" height="1416" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16715543" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16706303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -287,16 +292,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/planar_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding>
-            <element signature="e#462#481#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -458,8 +453,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clusters_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="41" column="67" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+        <state relative-caret-position="66">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/pcl-1.7/pcl/segmentation/region_growing_rgb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5302">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding>
+            <element signature="e#462#481#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
