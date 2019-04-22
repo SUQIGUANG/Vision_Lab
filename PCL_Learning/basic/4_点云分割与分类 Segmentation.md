@@ -1,5 +1,7 @@
 # 点云分割
 
+pcl_segmentation库算法可以实现将点云分割到不同的集群。这些算法最适合处理空间隔离的点云。在这种情况下,集群通常用于计算得到独立的部件,以备后续可以独立处理。
+
 	点云分割是根据空间，几何和纹理等特征对点云进行划分，
 	使得同一划分内的点云拥有相似的特征，点云的有效分割往往是许多应用的前提，
 	例如逆向工作，CAD领域对零件的不同扫描表面进行分割，
@@ -7,7 +9,7 @@
 	进而进行基于3D内容的检索，组合重用等。
 
 
-	点云的分割与分类也算是一个大Topic了，这里因为多了一维就和二维图像比多了许多问题，
+	点云的分割与分类也算是一个大Topic了，这里因为多了一维，就比二维图像多了许多问题，
 	点云分割又分为区域提取、线面提取、语义分割与聚类等。
 	同样是分割问题，点云分割涉及面太广，确实是三言两语说不清楚的。
 	只有从字面意思去理解了，遇到具体问题再具体归类。
@@ -48,14 +50,14 @@
     所有估计参数算法都符合一致性原则。
     在PCL中设计的采样一致性算法的应用主要就是对点云进行分割，根据设定的不同的几个模型，
     估计对应的几何参数模型的参数，在一定容许的范围内分割出在模型上的点云。 
-    
+
 ### RANSAC随机采样一致性算法的介绍
     RANSAC是“RANdom SAmple Consensus（随机抽样一致）”的缩写。
     
     它可以从一组包含“局外点”的观测数据集中，通过迭代方式估计数学模型的参数。
     
     它是一种不确定的算法——它有一定的概率得出一个合理的结果；
-  
+      
     为了提高概率必须提高迭代次数。
     数据分两种：
        有效数据（inliers）和
@@ -76,9 +78,9 @@
     简单的最 小二乘法不能找到适应于局内点的直线，原因是最小二乘法尽量去适应包括局外点在内的所有点。
     相反，RANSAC能得出一个仅仅用局内点计算出模型，并且概 率还足够高。
     但是，RANSAC并不能保证结果一定正确，为了保证算法有足够高的合理概率，我们必须小心的选择算法的参数。
-
-    左图：包含很多局外点的数据集   右图：RANSAC找到的直线（局外点并不影响结果）
     
+    左图：包含很多局外点的数据集   右图：RANSAC找到的直线（局外点并不影响结果）
+
 #### RANSAC算法概述
 	RANSAC算法的输入是一组观测数据，一个可以解释或者适应于观测数据的参数化模型，一些可信的参数。
 	RANSAC通过反复选择数据中的一组随机子集来达成目标。被选取的子集被假设为局内点，
@@ -89,7 +91,7 @@
 	3.如果有足够多的点被归类为假设的局内点，那么估计的模型就足够合理。
 	4.然后，用所有假设的局内点去重新估计模型，因为它仅仅被初始的假设局内点估计过。
 	5.最后，通过估计局内点与模型的错误率来评估模型。
-	
+
 #### 算法
     伪码形式的算法如下所示：
 ##### 输入：
@@ -104,7 +106,7 @@
     best_model —— 跟数据最匹配的模型参数（如果没有找到好的模型，返回null）
     best_consensus_set —— 估计出模型的数据点
     best_error —— 跟数据相关的估计出的模型错误
-
+    
           开始：
     iterations = 0
     best_model = null
@@ -114,7 +116,7 @@
         maybe_inliers = 从数据集中随机选择n个点
         maybe_model = 适合于maybe_inliers的模型参数
         consensus_set = maybe_inliers
-
+    
         for ( 每个数据集中不属于maybe_inliers的点 ）
         if ( 如果点适合于maybe_model，且错误小于t ）
           将点添加到consensus_set
@@ -129,7 +131,7 @@
           best_error =  this_error
         增加迭代次数
     返回 best_model, best_consensus_set, best_error    
-    
+
 ### 最小中值法（LMedS）
     LMedS的做法很简单，就是从样本中随机抽出N个样本子集，使用最大似然（通常是最小二乘）
     对每个子集计算模型参数和该模型的偏差，记录该模型参
@@ -141,7 +143,7 @@
     
     2.线模型     SACMODEL_LINE   参数   
     [point_on_line.x point_on_line.y point_on_line.z line_direction.x line_direction.y line_direction.z]
-
+    
     3.平面圆模型 SACMODEL_CIRCLE2D  参数 [center.x center.y radius]
     
     4.三维圆模型 SACMODEL_CIRCLE3D
@@ -156,7 +158,7 @@
     [apex.x, apex.y, apex.z, axis_direction.x, axis_direction.y, axis_direction.z, opening_angle]
     
     8.平行线     SACMODEL_PARALLEL_LINE 参数同 线模型 
-    
+
 ### PCL中Sample_consensus模块及类的介绍
     PCL中Sample_consensus库实现了随机采样一致性及其泛化估计算法，
     例如平面，柱面，等各种常见的几何模型，用不同的估计算法和不同的
@@ -197,7 +199,7 @@
     4.获取距离阈值  double   getDistanceThreshold ()
     5.设置最大迭代次数 void  setMaxIterations (int max_iterations)
     6.获取最大迭代次数 int   getMaxIterations ()
-     
+
 ## 1 随机采样一致性 球模型 和 平面模型 pcl::SampleConsensusModelSphere  pcl::SampleConsensusModelPlane
 	在没有任何参数的情况下，三维窗口显示创建的原始点云（含有局内点和局外点），
 	如图所示，很明显这是一个带有噪声的菱形平面，
@@ -209,19 +211,19 @@
 	#include <pcl/sample_consensus/ransac.h>          // 采样一致性
 	#include <pcl/sample_consensus/sac_model_plane.h> // 平面模型
 	#include <pcl/sample_consensus/sac_model_sphere.h>// 球模型
-
+	
 	//创建随机采样一致性对象
 	pcl::SampleConsensusModelSphere<pcl::PointXYZ>::Ptr
 	model_s(new pcl::SampleConsensusModelSphere<pcl::PointXYZ> (cloud));   //针对球模型的对象
 	pcl::SampleConsensusModelPlane<pcl::PointXYZ>::Ptr
 	model_p (new pcl::SampleConsensusModelPlane<pcl::PointXYZ> (cloud));   //针对平面模型的对象
-
+	
 	//根据命令行参数，来随机估算对应平面模型，并存储估计的局内点
 	pcl::RandomSampleConsensus<pcl::PointXYZ> ransac (model_p);
 	ransac.setDistanceThreshold (.01);    //与平面距离小于0.01 的点称为局内点考虑
 	ransac.computeModel();                //执行随机参数估计
 	ransac.getInliers(inliers);           //存储估计所得的局内点
-
+	
 	//根据命令行参数  来随机估算对应的圆球模型，存储估计的内点
 	pcl::RandomSampleConsensus<pcl::PointXYZ> ransac (model_s);
 	ransac.setDistanceThreshold (.01);
@@ -247,7 +249,7 @@
 	  seg.setModelType (pcl::SACMODEL_PLANE);//　平面模型
 	  seg.setMethodType (pcl::SAC_RANSAC);// 随机采样一致性算法
 	  seg.setDistanceThreshold (0.01);//是否在平面上的阈值
-
+	
 	  seg.setInputCloud (cloud);//输入点云
 	  seg.segment (*inliers, *coefficients);//分割　得到平面系数　已经在平面上的点的　索引
 [平面模型分割 ModelCoefficients SACMODEL_PLANE SACSegmentation ](Basic/Segmentation/planar_segmentation.cpp)	  
@@ -299,7 +301,7 @@
 	  //  seg.setModelType (pcl::SACMODEL_LINE );
 	  seg.setMethodType (pcl::SAC_RANSAC);
 	  seg.setDistanceThreshold (0.01);
-
+	
 	  seg.setInputCloud (cloud_filtered);
 	  seg.segment (*inliers, *coefficients);//得到平面模型
 
@@ -315,7 +317,7 @@
 	  	cloud_filtered->points.size ()  << 
 	 	 " data points." << 
 	 	 std::endl; //*
-
+	
 	  // Create a set of planar coefficients with X=Y=
 	  pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients ());
 	  coefficients->values.resize (4);
@@ -323,7 +325,7 @@
 	  coefficients->values[1] = 0.126715;
 	  coefficients->values[2] = 0.981995;
 	  coefficients->values[3] = -0.702224;
-
+	
 	  // Create the filtering object
 	  pcl::ProjectInliers<pcl::PointXYZ> proj;
 	  proj.setModelType (pcl::SACMODEL_PLANE);
@@ -334,7 +336,7 @@
 
 ## 4 欧氏距离分割 平面模型分割平面　平面上按　聚类得到　多个点云团  pcl::EuclideanClusterExtraction
 	基于欧式距离的分割
-
+	
 	基于欧式距离的分割和基于区域生长的分割本质上都是用区分邻里关系远近来完成的。
 	由于点云数据提供了更高维度的数据，故有很多信息可以提取获得。
 	欧几里得算法使用邻居之间距离作为判定标准，
@@ -347,10 +349,10 @@
 	    2. 在 Q\p10 里找到一点p12,重复1
 	    3. 在 Q\p10,p12 找到一点，重复1，找到p22,p23,p24....全部放进Q里
 	    4. 当 Q 再也不能有新点加入了，则完成搜索了
-
+	
 	因为点云总是连成片的，很少有什么东西会浮在空中来区分。
 	但是如果结合此算法可以应用很多东东。
-
+	
 	   1. 半径滤波(统计学滤波)删除离群点　体素格下采样等
 	   2. 采样一致找到桌面（平面）或者除去滤波
 	   3. 提取除去平面内点的　外点　（桌上的物体就自然成了一个个的浮空点云团）
@@ -368,14 +370,14 @@
 	  ec.setInputCloud (cloud_filtered);
 	  ec.extract (cluster_indices);           //从点云中提取聚类，并将点云索引保存在cluster_indices中
 	-----------------------------------------------------
-	
+
 ### 2）条件欧几里德聚类法  pcl::ConditionalEuclideanClustering
 	这个条件的设置是可以由我们自定义的，因为除了距离检查，聚类的点还需要满足一个特殊的自定义的要求，
 	就是以第一个点为标准作为种子点，候选其周边的点作为它的对比或者比较的对象，
 	如果满足条件就加入到聚类的对象中.
-
+	
 	#include <pcl/segmentation/conditional_euclidean_clustering.h>
-
+	
 	//如果此函数返回true，则将添加候选点到种子点的簇类中。
 	bool
 	customCondition(const pcl::PointXYZ& seedPoint, const pcl::PointXYZ& candidatePoint, float squaredDistance)
@@ -396,7 +398,7 @@
 	    clustering.setConditionFunction(&customCondition);//附加条件函数
 	    std::vector<pcl::PointIndices> clusters;
 	    clustering.segment(clusters);
-
+	
 	    // 对于每一个聚类结果
 	    int currentClusterNum = 1;
 	    for (std::vector<pcl::PointIndices>::const_iterator i = clusters.begin(); i != clusters.end(); ++i)
@@ -408,7 +410,7 @@
 		cluster->width = cluster->points.size();
 		cluster->height = 1;
 		cluster->is_dense = true;
-
+	
 		// ...and save it to disk.
 		if (cluster->points.size() <= 0)
 		    break;
@@ -416,7 +418,7 @@
 			  << cluster->points.size() << " points." << std::endl;
 		std::string fileName = "cluster" + boost::to_string(currentClusterNum) + ".pcd";
 		pcl::io::savePCDFileASCII(fileName, *cluster);
-
+	
 		currentClusterNum++;
 	    }
 
@@ -430,7 +432,7 @@
 	（根据事先确定的生长或相似准则来确定）合并到种子像素所在的区域中。
 	而新的像素继续作为种子向四周生长，
 	直到再没有满足条件的像素可以包括进来，一个区 域就生长而成了。
-
+	
 	区域生长算法直观感觉上和欧几里德算法相差不大，
 	都是从一个点出发，最终占领整个被分割区域，
 	欧几里德算法是通过距离远近，
@@ -462,7 +464,7 @@
 
 	  显然，上述算法是针对小曲率变化面设计的。
 	尤其适合对连续阶梯平面进行分割：比如SLAM算法所获得的建筑走廊。
-
+	
 	  //区域增长聚类分割对象　<点，法线>
 	  pcl::RegionGrowing<pcl::PointXYZ, pcl::Normal> reg;
 	  reg.setMinClusterSize (50);     //最小的聚类的点数
@@ -474,13 +476,13 @@
 	  reg.setInputNormals (normals);  //输入的法线
 	  reg.setSmoothnessThreshold (3.0 / 180.0 * M_PI);//设置平滑度 法线差值阈值
 	  reg.setCurvatureThreshold (1.0);                //设置曲率的阀值
-
+	
 	  std::vector <pcl::PointIndices> clusters;
 	  reg.extract (clusters);//提取点的索引
 
 
 [基于法线差值和曲率差值的区域聚类分割算法 RegionGrowing ](Basic/Segmentation/region_growing_normal_cur.cpp)
- 
+
 ## 6 基于颜色的　区域聚类分割算法   pcl::RegionGrowingRGB
 	基于颜色的区域生长分割法
 	除了普通点云之外，还有一种特殊的点云，成为RGB点云
@@ -495,14 +497,14 @@
 	尤其是复杂室内场景，颜色分割 可以轻松的将连续的场景点云变成不同的物体。
 	哪怕是高低不平的地面，设法用采样一致分割器抽掉平面，
 	颜色分割算法对不同的颜色的物体实现分割。
-
+	
 	算法分为两步：
-
+	
 	（1）分割，当前种子点和领域点之间色差小于色差阀值的视为一个聚类
-
+	
 	（2）合并，聚类之间的色差小于色差阀值和并为一个聚类，
 	  且当前聚类中点的数量小于聚类点数量的与最近的聚类合并在一起
-
+	
 	----------------------------------------------------------
 	 //基于颜色的区域生成的对象
 	  pcl::RegionGrowingRGB<pcl::PointXYZRGB> reg;
@@ -515,7 +517,7 @@
 	  reg.setMinClusterSize (600);    //设置聚类的大小
 	  std::vector <pcl::PointIndices> clusters;
 	  reg.extract (clusters);//
-
+	
 	  pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
 
 
@@ -531,7 +533,7 @@
 
 	The Min-Cut (minimum cut) algorithm最小割算法是图论中的一个概念，
 	其作用是以某种方式，将两个点分开，当然这两个点中间可能是通过无数的点再相连的。
-
+	
 	如果要分开最左边的点和最右边的点，红绿两种割法都是可行的，
 	但是红线跨过了三条线，绿线只跨过了两条。
 	单从跨线数量上来论可以得出绿线这种切割方法更优 的结论。
@@ -546,7 +548,7 @@
 	第二个是给图中的连线赋予合适的权值。
 	只要这两个要素合适，最小割算法就会正确的分割出想要的结果。
 	点云是分开的点。只要把点云中所有的点连起来就可以了。
-
+	
 	连接算法如下：
 		   1. 找到每个点临近的n个点
 		   2. 将这n个点和父点连接
@@ -557,16 +559,16 @@
 	物体分割比如图像分割给人一个直观印象就是属于该物体的点，应该相互之间不会太远。
 	也就是说，可以用点与点之间的欧式距离来构造权值。
 	所有线的权值可映射为线长的函数。 
-
+	
 	cost = exp(-(dist/cet)^2)  距离越远　cost越小　越容易被分割
-
+	
 	我们知道这种分割是需要指定对象的，也就是我们指定聚类的中心点（center）以及聚类的半径（radius），
 	当然我们指定了中心点和聚类的半径，那么就要被保护起来，保护的方法就是增加它的权值.
-
+	
 	dist2Center / radius
-
+	
 	dist2Center　＝　sqrt((x-x_center)^2+(y-y_center)^2)
-
+	
 	--------------------------------------------------
 	// 申明一个Min-cut的聚类对象
 	pcl::MinCutSegmentation<pcl::PointXYZ> clustering;
@@ -580,18 +582,18 @@
 	point.z = 100.0;
 	foregroundPoints->points.push_back(point);
 	clustering.setForegroundPoints(foregroundPoints);//设置聚类对象的前景点
-
+	
 	//设置sigma，它影响计算平滑度的成本。它的设置取决于点云之间的间隔（分辨率）
 	clustering.setSigma(0.02);// cet cost = exp(-(dist/cet)^2) 
 	// 设置聚类对象的半径.
 	clustering.setRadius(0.01);// dist2Center / radius
-
+	
 	 //设置需要搜索的临近点的个数，增加这个也就是要增加边界处图的个数
 	clustering.setNumberOfNeighbours(20);
-
+	
 	//设置前景点的权重（也就是排除在聚类对象中的点，它是点云之间线的权重，）
 	clustering.setSourceWeight(0.6);
-
+	
 	std::vector <pcl::PointIndices> clusters;
 	clustering.extract(clusters);
 
@@ -608,18 +610,18 @@
 		3. 法线的差异  det(n,r_l, r_s) = (n_l - n_s)/2
 		4. 条件滤波器 
 		5. 欧式聚类 法线的差异
-
+	
 	  // Create output cloud for DoN results
 	  PointCloud<PointNormal>::Ptr doncloud (new pcl::PointCloud<PointNormal>);
 	  copyPointCloud<PointXYZRGB, PointNormal>(*cloud, *doncloud);
-
+	
 	  cout << "Calculating DoN... " << endl;
 	  // Create DoN operator
 	  pcl::DifferenceOfNormalsEstimation<PointXYZRGB, PointNormal, PointNormal> don;
 	  don.setInputCloud (cloud);
 	  don.setNormalScaleLarge (normals_large_scale);
 	  don.setNormalScaleSmall (normals_small_scale);
-
+	
 	  if (!don.initCompute ())
 	  {
 	    std::cerr << "Error: Could not initialize DoN feature operator" << std::endl;
@@ -633,7 +635,7 @@
 ## 9 超体聚类是一种图像的分割方法   pcl::SupervoxelClustering
 	超体聚类  
 	超体聚类是一种图像的分割方法。
-
+	
 	超体（supervoxel）是一种集合，集合的元素是“体”。
 	与体素滤波器中的体类似，其本质是一个个的小方块。
 	与大部分的分割手段不同，超体聚 类的目的并不是分割出某种特定物体，超
@@ -642,11 +644,11 @@
 	以超像素关系来理解图像已经广为研究。本质上这种方法是对局部的一种总结，
 	纹理，材质，颜色类似的部分会被自动的分割成一块，有利于后 续识别工作。
 	比如对人的识别，如果能将头发，面部，四肢，躯干分开，则能更好的对各种姿态，性别的人进行识别。
-
+	
 	点云和图像不一样，其不存在像素邻接关系。所以，超体聚类之前，
 	必须以八叉树对点云进行划分，获得不同点团之间的邻接关系。
 	与图像相似点云的邻接关系也有很多，如面邻接，线邻接，点邻接。
-
+	
 	超体聚类实际上是一种特殊的区域生长算法，和无限制的生长不同，
 	超体聚类首先需要规律的布置区域生长“晶核”。晶核在空间中实际上是均匀分布的,
 	并指定晶核距离（Rseed)。再指定粒子距离(Rvoxel)。
@@ -660,10 +662,10 @@
 	  super.setColorImportance (color_importance); //0.2f
 	  super.setSpatialImportance (spatial_importance); //0.4f
 	  super.setNormalImportance (normal_importance); //1.0f
-
+	
 	  std::map <uint32_t, pcl::Supervoxel<PointT>::Ptr > supervoxel_clusters;
 	  super.extract (supervoxel_clusters);
-	
+
 
 [超体聚类是一种图像的分割方法 SupervoxelClustering ](Basic/Segmentation/supervoxel_clustering.cpp)
 
@@ -678,7 +680,7 @@
 	PCL支持点云的形态学滤波，四种操作：腐蚀、膨胀、开（先腐蚀后膨胀）、闭（先膨胀后腐蚀）
 	图像的膨胀:白色区域扩展黑色变小
 	图像的腐蚀:白色区域变小黑色区域扩展
-
+	
 	在#include <pcl/filters/morphological_filter.h>中定义了枚举类型
 	enum MorphologicalOperators
 	  {
@@ -687,10 +689,10 @@
 	    MORPH_DILATE,//膨胀　　cloud_out.points[p_idx].z = max_pt.z ();
 	    MORPH_ERODE//腐蚀　　cloud_out.points[p_idx].z = min_pt.z ();
 	  };
-
+	
 	点云渐进形态学滤波 实现地面点分割
 	#include <pcl/segmentation/progressive_morphological_filter.h>
-
+	
 	    // 创建形态学滤波器对象
 	    pcl::ProgressiveMorphologicalFilter<pcl::PointXYZ> pmf;
 	    pmf.setInputCloud(cloud);

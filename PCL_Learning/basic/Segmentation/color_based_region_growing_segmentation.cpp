@@ -18,7 +18,7 @@
 
 算法分为两步：
 
-（1）分割，当前种子点和领域点之间色差小于色差阀值的视为一个聚类
+（1）分割，当前种子点和邻域点之间色差小于色差阀值的视为一个聚类
 （2）合并，聚类之间的色差小于色差阀值和并为一个聚类，且当前聚类
     中点的数量小于聚类点数量的与最近的聚类合并在一起。
 */
@@ -35,47 +35,49 @@
 
 int main (int argc, char** argv)
 {
-  // 搜索算法初始化定义
-  pcl::search::Search <pcl::PointXYZRGB>::Ptr tree = boost::shared_ptr<pcl::search::Search<pcl::PointXYZRGB> > (new pcl::search::KdTree<pcl::PointXYZRGB>);
+    // 搜索算法（KdTree）初始化定义
+    pcl::search::Search <pcl::PointXYZRGB>::Ptr tree = boost::shared_ptr<pcl::search::Search<pcl::PointXYZRGB> > (new pcl::search::KdTree<pcl::PointXYZRGB>);
 
-  //点云的类型初始化定义
-  pcl::PointCloud <pcl::PointXYZRGB>::Ptr cloud (new pcl::PointCloud <pcl::PointXYZRGB>);
+    // 点云的类型初始化定义
+    pcl::PointCloud <pcl::PointXYZRGB>::Ptr cloud (new pcl::PointCloud <pcl::PointXYZRGB>);
 
-  // 加载文件
-  if ( pcl::io::loadPCDFile <pcl::PointXYZRGB> ("../region_growing_tutorial.pcd", *cloud) == -1 )
-  {
-    std::cout << "Cloud reading failed." << std::endl;
-    return (-1);
-  }
-  //存储点云索引的容器
-  pcl::IndicesPtr indices (new std::vector <int>);
+    // 加载文件
+    if ( pcl::io::loadPCDFile <pcl::PointXYZRGB> ("../region_growing_rgb_tutorial.pcd", *cloud) == -1 )
+    {
+        std::cout << "Cloud reading failed." << std::endl;
+        return (-1);
+    }
 
-  //初始化直通滤波器，直通滤波在Z轴的0到1米之间:剔除NAN和噪点
-  pcl::PassThrough<pcl::PointXYZRGB> pass;// 
-  pass.setInputCloud (cloud);
-  pass.setFilterFieldName ("z");
-  pass.setFilterLimits (0.0, 1.0);
-  pass.filter (*indices);//直通滤波后的的点云的索引　避免拷贝
-  
- //基于颜色的区域生成的对象
-  pcl::RegionGrowingRGB<pcl::PointXYZRGB> reg;
-  reg.setInputCloud (cloud);
-  reg.setIndices (indices);   //点云的索引
-  reg.setSearchMethod (tree);
-  reg.setDistanceThreshold (10);//距离的阀值
-  reg.setPointColorThreshold (6);//点与点之间颜色容差
-  reg.setRegionColorThreshold (5);//区域之间容差
-  reg.setMinClusterSize (600);    //设置聚类的大小
-  std::vector <pcl::PointIndices> clusters;
-  reg.extract (clusters);//
+    // 存储点云索引的容器
+    pcl::IndicesPtr indices (new std::vector <int>);
 
-  pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
-  pcl::visualization::CloudViewer viewer ("Cluster viewer");
-  viewer.showCloud (colored_cloud);
-  while (!viewer.wasStopped ())
-  {
-    boost::this_thread::sleep (boost::posix_time::microseconds (100));
-  }
+    // 初始化直通滤波器pass，直通滤波在Z轴的0到1米之间:剔除NAN和噪点
+    pcl::PassThrough<pcl::PointXYZRGB> pass;//
+    pass.setInputCloud (cloud);
+    pass.setFilterFieldName ("z");
+    pass.setFilterLimits (0.0, 1.0);
+    pass.filter (*indices);    //直通滤波后的的点云的索引，避免拷贝
 
-  return (0);
+    // 基于颜色的区域生成的对象reg
+    pcl::RegionGrowingRGB<pcl::PointXYZRGB> reg;
+    reg.setInputCloud (cloud);
+    reg.setIndices (indices);   //点云的索引
+    reg.setSearchMethod (tree);
+    reg.setDistanceThreshold (10);//距离的阀值
+    reg.setPointColorThreshold (6);//点与点之间颜色容差
+    reg.setRegionColorThreshold (5);//区域之间容差
+    reg.setMinClusterSize (500);    //设置聚类的最小点数
+    std::vector <pcl::PointIndices> clusters;
+    reg.extract (clusters);//
+
+    // 显示
+    pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
+    pcl::visualization::CloudViewer viewer ("Cluster viewer");
+    viewer.showCloud (colored_cloud);
+    while (!viewer.wasStopped ())
+    {
+        boost::this_thread::sleep (boost::posix_time::microseconds (100));
+    }
+
+    return (0);
 }

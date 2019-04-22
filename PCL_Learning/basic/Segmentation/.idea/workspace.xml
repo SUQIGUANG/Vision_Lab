@@ -2,16 +2,16 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="segmentation" targetName="min_Cut" />
       <config projectName="segmentation" targetName="cylinder_segmentation" />
       <config projectName="segmentation" targetName="region_growing_normal_cur" />
-      <config projectName="segmentation" targetName="clusters_segmentation" />
-      <config projectName="segmentation" targetName="difference_of_Normals" />
       <config projectName="segmentation" targetName="supervoxel" />
       <config projectName="segmentation" targetName="color_based" />
+      <config projectName="segmentation" targetName="planar_segmentation" />
       <config projectName="segmentation" targetName="random_sample_consensus" />
       <config projectName="segmentation" targetName="morphologicalFilter_seg" />
-      <config projectName="segmentation" targetName="planar_segmentation" />
-      <config projectName="segmentation" targetName="min_Cut" />
+      <config projectName="segmentation" targetName="difference_of_Normals" />
+      <config projectName="segmentation" targetName="clusters_segmentation" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -21,8 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53769128-f954-49f6-8cf8-7b0ea7dad895" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../4_点云分割与分类 Segmentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/../4_点云分割与分类 Segmentation.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clusters_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/clusters_segmentation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -38,10 +38,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            <state relative-caret-position="641">
+              <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
               <folding>
-                <element signature="e#462#481#0" expanded="true" />
+                <element signature="e#469#488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,7 +66,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="75" />
     <option name="y" value="24" />
-    <option name="width" value="1730" />
+    <option name="width" value="1561" />
     <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -184,11 +184,12 @@
       <workItem from="1555485118434" duration="5308000" />
       <workItem from="1555551335160" duration="11410000" />
       <workItem from="1555575508778" duration="9098000" />
+      <workItem from="1555896448929" duration="3476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25816000" />
+    <option name="totallyTimeSpent" value="29292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -200,15 +201,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="24" width="1730" height="1416" extended-state="4" />
+    <frame x="75" y="24" width="1561" height="1416" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16706303" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18836749" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35326087" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26319876" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -249,6 +250,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -392,24 +407,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/pcl-1.7/pcl/filters/filter_indices.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="122" column="112" lean-forward="true" selection-start-line="122" selection-start-column="112" selection-end-line="122" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/pcl-1.7/pcl/segmentation/extract_clusters.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="321" column="6" selection-start-line="321" selection-start-column="6" selection-end-line="321" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/pcl-1.7/pcl/search/kdtree.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -458,19 +459,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/pcl-1.7/pcl/filters/passthrough.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="105" column="77" lean-forward="true" selection-start-line="105" selection-start-column="77" selection-end-line="105" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/pcl-1.7/pcl/filters/filter_indices.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/pcl-1.7/pcl/search/kdtree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/pcl-1.7/pcl/segmentation/region_growing.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="90" column="46" lean-forward="true" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/include/pcl-1.7/pcl/segmentation/region_growing_rgb.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5302">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="314">
+          <caret line="165" column="43" lean-forward="true" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        <state relative-caret-position="641">
+          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
           <folding>
-            <element signature="e#462#481#0" expanded="true" />
+            <element signature="e#469#488#0" expanded="true" />
           </folding>
         </state>
       </provider>
