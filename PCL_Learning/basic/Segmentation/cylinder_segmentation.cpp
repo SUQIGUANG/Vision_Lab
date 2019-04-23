@@ -19,7 +19,7 @@
 typedef pcl::PointXYZ PointT;
 int main (int argc, char** argv)
 {
-  // 所需要的对象　All the objects needed
+  // 初始化所需要的对象　All the objects needed
   pcl::PCDReader reader;//PCD文件读取对象
   pcl::PassThrough<PointT> pass;//直通滤波对象
   pcl::NormalEstimation<PointT, pcl::Normal> ne;//法线估计对象
@@ -39,7 +39,7 @@ int main (int argc, char** argv)
   pcl::PointIndices::Ptr inliers_plane (new pcl::PointIndices), inliers_cylinder (new pcl::PointIndices);//内点索引
 
   // 读取桌面场景点云　Read in the cloud data
-  reader.read ("../../surface/table_scene_mug_stereo_textured.pcd", *cloud);
+  reader.read ("../table_scene_mug_stereo_textured.pcd", *cloud);
   std::cerr << "PointCloud has: " << cloud->points.size () << " data points." << std::endl;
 
   // 直通滤波，将Z轴不在（0，1.5）范围的点过滤掉，将剩余的点存储到cloud_filtered对象中
@@ -118,7 +118,7 @@ int main (int argc, char** argv)
 
 // 3D点云显示 绿色
   pcl::visualization::PCLVisualizer viewer ("3D Viewer");
-  viewer.setBackgroundColor (255, 255, 255);//背景颜色　白色
+  viewer.setBackgroundColor (0, 0, 0);//背景颜色　白色
   //viewer.addCoordinateSystem (1.0);
   viewer.initCameraParameters ();
 //平面上的点云　红色

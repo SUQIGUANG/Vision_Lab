@@ -2,16 +2,16 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="segmentation" targetName="min_Cut" />
       <config projectName="segmentation" targetName="cylinder_segmentation" />
       <config projectName="segmentation" targetName="region_growing_normal_cur" />
+      <config projectName="segmentation" targetName="clusters_segmentation" />
+      <config projectName="segmentation" targetName="difference_of_Normals" />
       <config projectName="segmentation" targetName="supervoxel" />
       <config projectName="segmentation" targetName="color_based" />
-      <config projectName="segmentation" targetName="planar_segmentation" />
       <config projectName="segmentation" targetName="random_sample_consensus" />
       <config projectName="segmentation" targetName="morphologicalFilter_seg" />
-      <config projectName="segmentation" targetName="difference_of_Normals" />
-      <config projectName="segmentation" targetName="clusters_segmentation" />
+      <config projectName="segmentation" targetName="planar_segmentation" />
+      <config projectName="segmentation" targetName="min_Cut" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -21,9 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53769128-f954-49f6-8cf8-7b0ea7dad895" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../4_点云分割与分类 Segmentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/../4_点云分割与分类 Segmentation.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Difference_of_Normals_in_diff_radis__Segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Difference_of_Normals_in_diff_radis__Segmentation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cylinder_segmentation.dir/cylinder_segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cylinder_segmentation.dir/cylinder_segmentation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cylinder_segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cylinder_segmentation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cylinder_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cylinder_segmentation.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,12 +38,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
+        <entry file="file://$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state relative-caret-position="531">
+              <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
               <folding>
-                <element signature="e#469#488#0" expanded="true" />
+                <element signature="e#1043#1069#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,6 +61,8 @@
         <option value="$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp" />
         <option value="$PROJECT_DIR$/clusters_segmentation.cpp" />
         <option value="$PROJECT_DIR$/color_based_region_growing_segmentation.cpp" />
+        <option value="$PROJECT_DIR$/cylinder_segmentation.cpp" />
+        <option value="$PROJECT_DIR$/Difference_of_Normals_in_diff_radis__Segmentation.cpp" />
       </list>
     </option>
   </component>
@@ -66,7 +70,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="75" />
     <option name="y" value="24" />
-    <option name="width" value="1561" />
+    <option name="width" value="1970" />
     <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -107,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.color_based">
+  <component name="RunManager" selected="Application.region_growing_normal_cur">
     <configuration name="clusters_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="segmentation" TARGET_NAME="clusters_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="segmentation" RUN_TARGET_NAME="clusters_segmentation">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -184,12 +188,13 @@
       <workItem from="1555485118434" duration="5308000" />
       <workItem from="1555551335160" duration="11410000" />
       <workItem from="1555575508778" duration="9098000" />
-      <workItem from="1555896448929" duration="3476000" />
+      <workItem from="1555896448929" duration="4568000" />
+      <workItem from="1555982849963" duration="4756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29292000" />
+    <option name="totallyTimeSpent" value="35140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -201,10 +206,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="24" width="1561" height="1416" extended-state="4" />
+    <frame x="75" y="24" width="1594" height="1416" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18836749" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2244502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -270,27 +275,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cylinder_segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Difference_of_Normals_in_diff_radis__Segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/random_sample_consensus.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1804">
@@ -497,9 +481,42 @@
     <entry file="file://$PROJECT_DIR$/color_based_region_growing_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
-          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
           <folding>
             <element signature="e#469#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cylinder_segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <element signature="e#96#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_scene_mug_stereo_textured.pcd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Difference_of_Normals_in_diff_radis__Segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+          <folding>
+            <element signature="e#251#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/min_Cut_Based_Segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+          <folding>
+            <element signature="e#1043#1069#0" expanded="true" />
           </folding>
         </state>
       </provider>

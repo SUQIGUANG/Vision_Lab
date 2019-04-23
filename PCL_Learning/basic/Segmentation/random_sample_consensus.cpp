@@ -44,8 +44,7 @@ simpleVis (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
  其中大部分点云数据是基于设定的圆球和平面模型计算
   而得到的坐标值作为局内点，有1/5的点云数据是被随机放置的组委局外点。
  ******************************************************************************/
-int
-main(int argc, char** argv)
+int main(int argc, char** argv)
 {
   // 初始化点云对象
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);  //存储源点云
