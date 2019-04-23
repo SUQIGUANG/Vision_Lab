@@ -38,9 +38,8 @@ typedef pcl::PointCloud<PointT> PointCloudT;//点云　申明pcl::PointXYZ数据
 
 bool next_iteration = false;
 
- //打印旋转矩阵和平移矩阵
-void
-print4x4Matrix (const Eigen::Matrix4d & matrix)
+//打印旋转矩阵和平移矩阵
+void print4x4Matrix (const Eigen::Matrix4d & matrix)
 {
   printf ("Rotation matrix :\n");
   printf ("    | %6.3f %6.3f %6.3f | \n", matrix (0, 0), matrix (0, 1), matrix (0, 2));
@@ -50,17 +49,13 @@ print4x4Matrix (const Eigen::Matrix4d & matrix)
   printf ("t = < %6.3f, %6.3f, %6.3f >\n\n", matrix (0, 3), matrix (1, 3), matrix (2, 3));
 }
 
-void
-keyboardEventOccurred (const pcl::visualization::KeyboardEvent& event,
-                       void* nothing)
+void keyboardEventOccurred (const pcl::visualization::KeyboardEvent& event,void* nothing)
 {//使用空格键来增加迭代次数，并更新显示
   if (event.getKeySym () == "space" && event.keyDown ())
     next_iteration = true;
 }
 
-int
-main (int argc,
-      char* argv[])
+int main (int argc,char* argv[])
 {
   // 申 云将要使用的 
   PointCloudT::Ptr cloud_in (new PointCloudT); // 原始点云

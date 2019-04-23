@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/normal_distributions_transform.cpp
+/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/normal_distributions_transform.cpp
 iostream
 -
 pcl/io/pcd_io.h

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/interactive_icp.cpp
+/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/interactive_icp.cpp
 iostream
 -
 string

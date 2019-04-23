@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/interactive_icp.cpp" "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/interactive_icp.dir/interactive_icp.cpp.o"
+  "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/interactive_icp.cpp" "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/interactive_icp.dir/interactive_icp.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

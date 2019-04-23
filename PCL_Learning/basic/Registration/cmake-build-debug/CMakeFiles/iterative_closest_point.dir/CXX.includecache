@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/iterative_closest_point.cpp
+/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/iterative_closest_point.cpp
 iostream
 -
 pcl/io/pcd_io.h

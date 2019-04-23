@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/pairwise_incremental_registration.cpp
+/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/pairwise_incremental_registration.cpp
 boost/make_shared.hpp
 -
 pcl/point_types.h

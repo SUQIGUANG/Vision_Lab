@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/normal_distributions_transform.cpp" "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/ndt.dir/normal_distributions_transform.cpp.o"
+  "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/normal_distributions_transform.cpp" "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/ndt.dir/normal_distributions_transform.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

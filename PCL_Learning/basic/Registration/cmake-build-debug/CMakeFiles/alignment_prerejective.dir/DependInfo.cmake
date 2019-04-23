@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/alignment_prerejective.cpp" "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/alignment_prerejective.dir/alignment_prerejective.cpp.o"
+  "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/alignment_prerejective.cpp" "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/alignment_prerejective.dir/alignment_prerejective.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

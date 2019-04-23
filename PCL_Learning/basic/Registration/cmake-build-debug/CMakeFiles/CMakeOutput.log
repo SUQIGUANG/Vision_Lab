@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_36d59/fast"
-/usr/bin/make -f CMakeFiles/cmTC_36d59.dir/build.make CMakeFiles/cmTC_36d59.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_36d59.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_36d59.dir/testCCompiler.c.o   -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_36d59
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36d59.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_36d59.dir/testCCompiler.c.o  -o cmTC_36d59 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_01cfd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_01cfd.dir/build.make CMakeFiles/cmTC_01cfd.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01cfd.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_01cfd.dir/testCCompiler.c.o   -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_01cfd
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01cfd.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_01cfd.dir/testCCompiler.c.o  -o cmTC_01cfd 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1cdd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1cdd.dir/build.make CMakeFiles/cmTC_f1cdd.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o   -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_f1cdd
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1cdd.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o  -o cmTC_f1cdd 
+Run Build Command:"/usr/bin/make" "cmTC_a2848/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2848.dir/build.make CMakeFiles/cmTC_a2848.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o   -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a2848
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2848.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o  -o cmTC_a2848 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f1cdd' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cckR1P92.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f1cdd /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2848' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZbVKwo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a2848 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f1cdd/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f1cdd.dir/build.make CMakeFiles/cmTC_f1cdd.dir/build]
-  ignore line: [make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o   -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_f1cdd]
-  ignore line: [/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1cdd.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o  -o cmTC_f1cdd ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a2848/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a2848.dir/build.make CMakeFiles/cmTC_a2848.dir/build]
+  ignore line: [make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o   -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a2848]
+  ignore line: [/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2848.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o  -o cmTC_a2848 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f1cdd' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cckR1P92.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f1cdd /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a2848' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZbVKwo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a2848 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cckR1P92.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccZbVKwo.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f1cdd] ==> ignore
+    arg [cmTC_a2848] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_f1cdd.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a2848.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,17 +149,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ffefb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ffefb.dir/build.make CMakeFiles/cmTC_ffefb.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ffefb.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_ffefb.dir/feature_tests.c.o   -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_ffefb
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffefb.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ffefb.dir/feature_tests.c.o  -o cmTC_ffefb 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_5f601/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5f601.dir/build.make CMakeFiles/cmTC_5f601.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f601.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_5f601.dir/feature_tests.c.o   -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5f601
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f601.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5f601.dir/feature_tests.c.o  -o cmTC_5f601 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -169,17 +169,17 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7a5c0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7a5c0.dir/build.make CMakeFiles/cmTC_7a5c0.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7a5c0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_7a5c0.dir/feature_tests.c.o   -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7a5c0
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a5c0.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7a5c0.dir/feature_tests.c.o  -o cmTC_7a5c0 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_dcd3b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dcd3b.dir/build.make CMakeFiles/cmTC_dcd3b.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dcd3b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_dcd3b.dir/feature_tests.c.o   -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dcd3b
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcd3b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_dcd3b.dir/feature_tests.c.o  -o cmTC_dcd3b 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -189,17 +189,17 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7cafd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7cafd.dir/build.make CMakeFiles/cmTC_7cafd.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7cafd.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_7cafd.dir/feature_tests.c.o   -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7cafd
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cafd.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7cafd.dir/feature_tests.c.o  -o cmTC_7cafd 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ba6ed/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ba6ed.dir/build.make CMakeFiles/cmTC_ba6ed.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ba6ed.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_ba6ed.dir/feature_tests.c.o   -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ba6ed
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba6ed.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ba6ed.dir/feature_tests.c.o  -o cmTC_ba6ed 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -207,30 +207,30 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_36d44/fast"
-/usr/bin/make -f CMakeFiles/cmTC_36d44.dir/build.make CMakeFiles/cmTC_36d44.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_36d44.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_36d44.dir/testCXXCompiler.cxx.o -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_36d44
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36d44.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_36d44.dir/testCXXCompiler.cxx.o  -o cmTC_36d44 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_30716/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30716.dir/build.make CMakeFiles/cmTC_30716.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_30716.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_30716.dir/testCXXCompiler.cxx.o -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_30716
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30716.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_30716.dir/testCXXCompiler.cxx.o  -o cmTC_30716 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f0cb9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f0cb9.dir/build.make CMakeFiles/cmTC_f0cb9.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_f0cb9
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0cb9.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f0cb9 
+Run Build Command:"/usr/bin/make" "cmTC_12d88/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12d88.dir/build.make CMakeFiles/cmTC_12d88.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_12d88
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12d88.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_12d88 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -240,23 +240,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f0cb9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnOemAh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f0cb9 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_12d88' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3vssdJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_12d88 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f0cb9/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f0cb9.dir/build.make CMakeFiles/cmTC_f0cb9.dir/build]
-  ignore line: [make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_f0cb9]
-  ignore line: [/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0cb9.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f0cb9 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_12d88/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_12d88.dir/build.make CMakeFiles/cmTC_12d88.dir/build]
+  ignore line: [make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_12d88]
+  ignore line: [/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12d88.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_12d88 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -266,13 +266,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f0cb9' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnOemAh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_f0cb9 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_12d88' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3vssdJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_12d88 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccnOemAh.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc3vssdJ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -290,7 +290,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f0cb9] ==> ignore
+    arg [cmTC_12d88] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_f0cb9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_12d88.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -328,17 +328,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2b230/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2b230.dir/build.make CMakeFiles/cmTC_2b230.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2b230.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_2b230.dir/feature_tests.cxx.o -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2b230
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b230.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2b230.dir/feature_tests.cxx.o  -o cmTC_2b230 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_221ca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_221ca.dir/build.make CMakeFiles/cmTC_221ca.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_221ca.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_221ca.dir/feature_tests.cxx.o -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_221ca
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_221ca.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_221ca.dir/feature_tests.cxx.o  -o cmTC_221ca 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -401,17 +401,17 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2321c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2321c.dir/build.make CMakeFiles/cmTC_2321c.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2321c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_2321c.dir/feature_tests.cxx.o -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2321c
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2321c.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2321c.dir/feature_tests.cxx.o  -o cmTC_2321c 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ac8a1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ac8a1.dir/build.make CMakeFiles/cmTC_ac8a1.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ac8a1.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_ac8a1.dir/feature_tests.cxx.o -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ac8a1
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac8a1.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ac8a1.dir/feature_tests.cxx.o  -o cmTC_ac8a1 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -474,17 +474,17 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b22b6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b22b6.dir/build.make CMakeFiles/cmTC_b22b6.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b22b6.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_b22b6.dir/feature_tests.cxx.o -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b22b6
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b22b6.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b22b6.dir/feature_tests.cxx.o  -o cmTC_b22b6 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_93ede/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93ede.dir/build.make CMakeFiles/cmTC_93ede.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_93ede.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_93ede.dir/feature_tests.cxx.o -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_93ede
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93ede.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_93ede.dir/feature_tests.cxx.o  -o cmTC_93ede 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -547,17 +547,17 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_21a05/fast"
-/usr/bin/make -f CMakeFiles/cmTC_21a05.dir/build.make CMakeFiles/cmTC_21a05.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_21a05.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_21a05.dir/feature_tests.cxx.o -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_21a05
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21a05.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_21a05.dir/feature_tests.cxx.o  -o cmTC_21a05 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_870c2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_870c2.dir/build.make CMakeFiles/cmTC_870c2.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_870c2.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_870c2.dir/feature_tests.cxx.o -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_870c2
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_870c2.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_870c2.dir/feature_tests.cxx.o  -o cmTC_870c2 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -618,30 +618,30 @@ make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registra
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_777fb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_777fb.dir/build.make CMakeFiles/cmTC_777fb.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_777fb.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_777fb.dir/CheckIncludeFile.c.o   -c /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_777fb
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_777fb.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_777fb.dir/CheckIncludeFile.c.o  -o cmTC_777fb 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_179b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_179b6.dir/build.make CMakeFiles/cmTC_179b6.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_179b6.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_179b6.dir/CheckIncludeFile.c.o   -c /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_179b6
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_179b6.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_179b6.dir/CheckIncludeFile.c.o  -o cmTC_179b6 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_136c3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_136c3.dir/build.make CMakeFiles/cmTC_136c3.dir/build
-make[1]: Entering directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_136c3.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_136c3.dir/CheckFunctionExists.c.o   -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_136c3
-/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_136c3.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_136c3.dir/CheckFunctionExists.c.o  -o cmTC_136c3 -lpthread 
-make[1]: Leaving directory '/home/sqg/code/MVision-master/PCL_APP/Basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_4008d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4008d.dir/build.make CMakeFiles/cmTC_4008d.dir/build
+make[1]: Entering directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4008d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4008d.dir/CheckFunctionExists.c.o   -c /home/sqg/下载/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4008d
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4008d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_4008d.dir/CheckFunctionExists.c.o  -o cmTC_4008d -lpthread 
+make[1]: Leaving directory '/home/sqg/Vision_Lab/PCL_Learning/basic/Registration/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
