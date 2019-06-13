@@ -11,7 +11,11 @@
  * the robot moves 5 each step, and makes 90 deg right turns at x3 - x5
  * At x5, there is a *loop closure* between x2 is avaible
  * The graph strcuture is shown:
- * 
+ *
+ * 一个简单的2维pose-graph SLAM
+ * 机器人从x1移动到x5，里程计信息在边上，机器人每一步移动五次，在x3、x4、x5处转动90度，
+ * 在x5处，与x2形成闭环，图结构如下：
+ *
  *  p-x1 - x2 - x3
  *         |    |
  *         x5 - x4 

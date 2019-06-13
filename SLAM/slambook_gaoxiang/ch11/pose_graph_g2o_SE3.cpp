@@ -32,11 +32,16 @@ int main( int argc, char** argv )
     }
 
     typedef g2o::BlockSolver<g2o::BlockSolverTraits<6,6>> Block;  // 6x6 BlockSolver
-    Block::LinearSolverType* linearSolver = new g2o::LinearSolverCholmod<Block::PoseMatrixType>(); // 线性方程求解器
-    Block* solver_ptr = new Block( linearSolver );      // 矩阵块求解器
+
+    std::unique_ptr<Block::LinearSolverType> linearSolver ( new g2o::LinearSolverCholmod<Block::PoseMatrixType>());  // 线性方程求解器
+    std::unique_ptr<Block> solver_ptr ( new Block ( std::move(linearSolver)));  // 矩阵块求解器
+
     // 梯度下降方法，从GN, LM, DogLeg 中选
-    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg( solver_ptr );
-    g2o::SparseOptimizer optimizer;     // 图模型
+    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg ( std::move(solver_ptr));
+ // g2o::OptimizationAlgorithmGaussNewton* solver = new g2o::OptimizationAlgorithmGaussNewton( solver_ptr );
+ // g2o::OptimizationAlgorithmDogleg* solver = new g2o::OptimizationAlgorithmDogleg( solver_ptr );
+
+    g2o::SparseOptimizer optimizer;
     optimizer.setAlgorithm( solver );   // 设置求解器
 
     int vertexCnt = 0, edgeCnt = 0; // 顶点和边的数量
