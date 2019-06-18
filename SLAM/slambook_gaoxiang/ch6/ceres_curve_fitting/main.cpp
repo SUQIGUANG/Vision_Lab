@@ -15,7 +15,7 @@ struct CURVE_FITTING_COST
         const T* const abc,     // 模型参数，有3维
         T* residual ) const     // 残差
     {
-        residual[0] = T ( _y ) - ceres::exp ( abc[0]*T ( _x ) *T ( _x ) + abc[1]*T ( _x ) + abc[2] ); // y-exp(ax^2+bx+c)
+        residual[0] = T ( _y ) - ceres::exp ( abc[0]*T ( _x ) *T ( _x ) + abc[1]*T ( _x ) + abc[2] ); // y-exp(ax^2+bx+c)，即残差
         return true;
     }
     const double _x, _y;    // x,y数据
@@ -24,8 +24,8 @@ struct CURVE_FITTING_COST
 int main ( int argc, char** argv )
 {
     double a=1.0, b=2.0, c=1.0;         // 真实参数值
-    int N=100;                          // 数据点
-    double w_sigma=1.0;                 // 噪声Sigma值
+    int N=100;                          // 产生100个数据点
+    double w_sigma=1.0;                 // 噪声Sigma值（零均值高斯噪声）
     cv::RNG rng;                        // OpenCV随机数产生器
     double abc[3] = {0,0,0};            // abc参数的估计值
 
@@ -37,17 +37,18 @@ int main ( int argc, char** argv )
         double x = i/100.0;
         x_data.push_back ( x );
         y_data.push_back (
-            exp ( a*x*x + b*x + c ) + rng.gaussian ( w_sigma )
+            exp ( a*x*x + b*x + c ) + rng.gaussian ( w_sigma )  // rng.gaussian ( w_sigma )产生零均值高斯噪声
         );
         cout<<x_data[i]<<" "<<y_data[i]<<endl;
     }
+
 
     // 构建最小二乘问题
     ceres::Problem problem;
     for ( int i=0; i<N; i++ )
     {
         problem.AddResidualBlock (     // 向问题中添加误差项
-        // 使用自动求导，模板参数：误差类型，输出维度，输入维度，维数要与前面struct中一致
+            // 使用自动求导，模板参数：误差类型，输出维度，输入维度，维数要与前面struct中一致
             new ceres::AutoDiffCostFunction<CURVE_FITTING_COST, 1, 3> ( 
                 new CURVE_FITTING_COST ( x_data[i], y_data[i] )
             ),
