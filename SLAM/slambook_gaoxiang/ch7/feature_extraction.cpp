@@ -10,7 +10,7 @@ int main ( int argc, char** argv )
 {
     if ( argc != 3 )
     {
-        cout<<"usage: feature_extraction img1 img2"<<endl;
+        cout<<"usage: ./feature_extraction img1 img2"<<endl;
         return 1;
     }
     //-- 读取图像
@@ -36,7 +36,7 @@ int main ( int argc, char** argv )
 
     Mat outimg1;
     drawKeypoints( img_1, keypoints_1, outimg1, Scalar::all(-1), DrawMatchesFlags::DEFAULT );
-    imshow("ORB特征点",outimg1);
+    imshow("ORB features",outimg1);   // 注意：这里的名字必须是英文，中文会报错
 
     //-- 第三步:对两幅图像中的BRIEF描述子进行匹配，使用 Hamming 距离
     vector<DMatch> matches;
@@ -55,8 +55,8 @@ int main ( int argc, char** argv )
     }
     
     // 仅供娱乐的写法
-    min_dist = min_element( matches.begin(), matches.end(), [](const DMatch& m1, const DMatch& m2) {return m1.distance<m2.distance;} )->distance;
-    max_dist = max_element( matches.begin(), matches.end(), [](const DMatch& m1, const DMatch& m2) {return m1.distance<m2.distance;} )->distance;
+ //   min_dist = min_element( matches.begin(), matches.end(), [](const DMatch& m1, const DMatch& m2) {return m1.distance<m2.distance;} )->distance;
+ //   max_dist = max_element( matches.begin(), matches.end(), [](const DMatch& m1, const DMatch& m2) {return m1.distance<m2.distance;} )->distance;
 
     printf ( "-- Max dist : %f \n", max_dist );
     printf ( "-- Min dist : %f \n", min_dist );
@@ -76,8 +76,8 @@ int main ( int argc, char** argv )
     Mat img_goodmatch;
     drawMatches ( img_1, keypoints_1, img_2, keypoints_2, matches, img_match );
     drawMatches ( img_1, keypoints_1, img_2, keypoints_2, good_matches, img_goodmatch );
-    imshow ( "所有匹配点对", img_match );
-    imshow ( "优化后匹配点对", img_goodmatch );
+    imshow ( "matched points", img_match );
+    imshow ( "matched points after optimation", img_goodmatch );
     waitKey(0);
 
     return 0;

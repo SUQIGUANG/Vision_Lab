@@ -1,0 +1,7 @@
+/home/sqg/下载/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sqg/Vision_Lab/SLAM/g2o/g2o_ba_example-master
+-- Found OpenCV: /opt/ros/kinetic (found version "3.3.1") 
+-- Found Eigen3: /usr/include/eigen3 (Required is at least version "2.91.0") 
+-- Found CHOLMOD: /usr/include/suitesparse  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sqg/Vision_Lab/SLAM/g2o/g2o_ba_example-master/cmake-build-debug

@@ -20,20 +20,21 @@ using namespace std;
 using namespace cv;
 
 void find_feature_matches (
-    const Mat& img_1, const Mat& img_2,
-    std::vector<KeyPoint>& keypoints_1,
-    std::vector<KeyPoint>& keypoints_2,
-    std::vector< DMatch >& matches );
+        const Mat& img_1, const Mat& img_2,
+        std::vector<KeyPoint>& keypoints_1,
+        std::vector<KeyPoint>& keypoints_2,
+        std::vector< DMatch >& matches );
 
 // 像素坐标转相机归一化坐标
 Point2d pixel2cam ( const Point2d& p, const Mat& K );
 
 void bundleAdjustment (
-    const vector<Point3f> points_3d,
-    const vector<Point2f> points_2d,
-    const Mat& K,
-    Mat& R, Mat& t
+        const vector<Point3f> points_3d,
+        const vector<Point2f> points_2d,
+        const Mat& K,
+        Mat& R, Mat& t
 );
+
 
 int main ( int argc, char** argv )
 {
@@ -51,6 +52,7 @@ int main ( int argc, char** argv )
     find_feature_matches ( img_1, img_2, keypoints_1, keypoints_2, matches );
     cout<<"一共找到了"<<matches.size() <<"组匹配点"<<endl;
 
+
     // 建立3D点
     Mat d1 = imread ( argv[3], CV_LOAD_IMAGE_UNCHANGED );       // 深度图为16位无符号数，单通道图像
     Mat K = ( Mat_<double> ( 3,3 ) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1 );
@@ -67,6 +69,7 @@ int main ( int argc, char** argv )
         pts_2d.push_back ( keypoints_2[m.trainIdx].pt );
     }
 
+
     cout<<"3d-2d pairs: "<<pts_3d.size() <<endl;
 
     Mat r, t;
@@ -80,6 +83,94 @@ int main ( int argc, char** argv )
     cout<<"calling bundle adjustment"<<endl;
 
     bundleAdjustment ( pts_3d, pts_2d, K, R, t );
+}
+
+
+void bundleAdjustment(
+        const vector<Point3f> points_3d,
+        const vector<Point2f> points_2d,
+        const Mat& K,
+        Mat& R,
+        Mat& t
+        )
+{
+    // 初始化g2o求解器
+    // BlockSolverTraits()描述固定维数优化问题，6是姿态维数，3是路标维数
+    typedef g2o::BlockSolver<g2o::BlockSolverTraits<6,3>> Block;
+
+    // 初始化线性求解器
+    unique_ptr<Block::LinearSolverType> linearSolver(new g2o::LinearSolverEigen<Block::PoseMatrixType>());
+    unique_ptr<Block> solver_ptr(new Block(move(linearSolver)));
+
+    // 初始化，solver为高斯牛顿算法求解
+    g2o::OptimizationAlgorithmGaussNewton* solver=new g2o::OptimizationAlgorithmGaussNewton(move(solver_ptr));
+
+    // 初始化，稀疏优化
+    g2o::SparseOptimizer optimizer;
+    optimizer.setAlgorithm(solver);
+
+    // pose
+    // SE3顶点在内部使用变换矩阵进行参数化，并在外部使用指数映射进行参数化（Expmap指的是指数映射exponential map）
+    g2o::VertexSE3Expmap* pose=new g2o::VertexSE3Expmap();    // 相机位姿
+    Eigen::Matrix3d R_mat;    // Matrix3d是3*3的double类型矩阵
+
+    R_mat<<
+         R.at<double> ( 0,0 ), R.at<double> ( 0,1 ), R.at<double> ( 0,2 ),
+         R.at<double> ( 1,0 ), R.at<double> ( 1,1 ), R.at<double> ( 1,2 ),
+         R.at<double> ( 2,0 ), R.at<double> ( 2,1 ), R.at<double> ( 2,2 );
+
+    pose->setId(0);
+    // SE3Quat 是g2o中老版本相机位姿的表示，内部使用四元数+平移向量存储位姿，同时支持李代数上的运算
+    pose->setEstimate(g2o::SE3Quat(R_mat,Eigen::Vector3d(t.at<double>(0,0),
+                                                         t.at<double>(1,0),
+                                                         t.at<double>(2,0))));
+
+    // 添加一个新的顶点， 然后使用新的顶点。
+    optimizer.addVertex(pose);
+
+    int index=1;
+    for(const Point3f p:points_3d)
+    {
+        g2o::VertexSBAPointXYZ* point=new g2o::VertexSBAPointXYZ();
+        point->setId(index++);
+        point->setEstimate(Eigen::Vector3d(p.x,p.y,p.z));
+        point->setMarginalized(true);
+        optimizer.addVertex(point);
+    }
+
+    // 优化器中添加相机内参
+    g2o::CameraParameters* camera=new g2o::CameraParameters(K.at<double> ( 0,0 ),
+                                                            Eigen::Vector2d ( K.at<double> ( 0,2 ),
+                                                            K.at<double> ( 1,2 ) ),
+                                                            0);
+    camera->setId(0);
+    optimizer.addParameter(camera);
+
+    index=1;
+    for(const Point2f p:points_2d)
+    {
+        g2o::EdgeProjectXYZ2UV* edge=new g2o::EdgeProjectXYZ2UV();
+        edge->setId(index);
+        edge->setVertex(0, dynamic_cast<g2o::VertexSBAPointXYZ*>(optimizer.vertex(index)));
+        edge->setVertex(1,pose);
+        edge->setMeasurement(Eigen::Vector2d(p.x,p.y));
+        edge->setParameterId(0,0);
+        edge->setInformation(Eigen::Matrix2d::Identity());
+        optimizer.addEdge(edge);
+        index++;
+    }
+
+
+    chrono::steady_clock::time_point t1=chrono::steady_clock::now();
+    optimizer.setVerbose(true);
+    optimizer.initializeOptimization();
+    optimizer.optimize(100);
+    chrono::steady_clock::time_point t2=chrono::steady_clock::now();
+    chrono::duration<double> time_used=chrono::duration_cast<chrono::duration<double>>(t2-t1);
+    cout<<"optimization costs time: "<<time_used.count()<<" seconds."<<endl;
+
+    cout<<endl<<"after optimization:"<<endl;
+    cout<<"T="<<endl<<Eigen::Isometry3d(pose->estimate()).matrix()<<endl;
 }
 
 void find_feature_matches ( const Mat& img_1, const Mat& img_2,
@@ -136,88 +227,8 @@ void find_feature_matches ( const Mat& img_1, const Mat& img_2,
 Point2d pixel2cam ( const Point2d& p, const Mat& K )
 {
     return Point2d
-           (
-               ( p.x - K.at<double> ( 0,2 ) ) / K.at<double> ( 0,0 ),
-               ( p.y - K.at<double> ( 1,2 ) ) / K.at<double> ( 1,1 )
-           );
-}
-
-void bundleAdjustment (
-    const vector< Point3f > points_3d,
-    const vector< Point2f > points_2d,
-    const Mat& K,
-    Mat& R, Mat& t )
-{
-    // 初始化g2o
-    typedef g2o::BlockSolver< g2o::BlockSolverTraits<6,3> > Block;  // pose 维度为 6, landmark 维度为 3
-
-    // Block::LinearSolverType* linearSolver = new g2o::LinearSolverCSparse<Block::PoseMatrixType>(); // 线性方程求解器
-    // 原先这里用的是CSparse，会报错，这里改为了Eigen求解器
-    std::unique_ptr<Block::LinearSolverType> linearSolver ( new g2o::LinearSolverEigen<Block::PoseMatrixType>());
-
-    // Block* solver_ptr = new Block ( linearSolver );
-    std::unique_ptr<Block> solver_ptr ( new Block ( std::move(linearSolver)));   // 矩阵块求解器
-
-    // g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg ( solver_ptr );
-    g2o::OptimizationAlgorithmGaussNewton* solver = new g2o::OptimizationAlgorithmGaussNewton ( std::move(solver_ptr));
-
-    g2o::SparseOptimizer optimizer;
-    optimizer.setAlgorithm ( solver );
-
-    // vertex
-    g2o::VertexSE3Expmap* pose = new g2o::VertexSE3Expmap(); // camera pose
-    Eigen::Matrix3d R_mat;
-    R_mat <<
-          R.at<double> ( 0,0 ), R.at<double> ( 0,1 ), R.at<double> ( 0,2 ),
-               R.at<double> ( 1,0 ), R.at<double> ( 1,1 ), R.at<double> ( 1,2 ),
-               R.at<double> ( 2,0 ), R.at<double> ( 2,1 ), R.at<double> ( 2,2 );
-    pose->setId ( 0 );
-    pose->setEstimate ( g2o::SE3Quat (
-                            R_mat,
-                            Eigen::Vector3d ( t.at<double> ( 0,0 ), t.at<double> ( 1,0 ), t.at<double> ( 2,0 ) )
-                        ) );
-    optimizer.addVertex ( pose );
-
-    int index = 1;
-    for ( const Point3f p:points_3d )   // landmarks
-    {
-        g2o::VertexSBAPointXYZ* point = new g2o::VertexSBAPointXYZ();
-        point->setId ( index++ );
-        point->setEstimate ( Eigen::Vector3d ( p.x, p.y, p.z ) );
-        point->setMarginalized ( true ); // g2o 中必须设置 marg 参见第十讲内容
-        optimizer.addVertex ( point );
-    }
-
-    // parameter: camera intrinsics
-    g2o::CameraParameters* camera = new g2o::CameraParameters (
-        K.at<double> ( 0,0 ), Eigen::Vector2d ( K.at<double> ( 0,2 ), K.at<double> ( 1,2 ) ), 0
-    );
-    camera->setId ( 0 );
-    optimizer.addParameter ( camera );
-
-    // edges
-    index = 1;
-    for ( const Point2f p:points_2d )
-    { 
-        g2o::EdgeProjectXYZ2UV* edge = new g2o::EdgeProjectXYZ2UV();
-        edge->setId ( index );
-        edge->setVertex ( 0, dynamic_cast<g2o::VertexSBAPointXYZ*> ( optimizer.vertex ( index ) ) );
-        edge->setVertex ( 1, pose );
-        edge->setMeasurement ( Eigen::Vector2d ( p.x, p.y ) );
-        edge->setParameterId ( 0,0 );
-        edge->setInformation ( Eigen::Matrix2d::Identity() );
-        optimizer.addEdge ( edge );
-        index++;
-    }
-
-    chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
-    optimizer.setVerbose ( true );
-    optimizer.initializeOptimization();
-    optimizer.optimize ( 100 );
-    chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
-    chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>> ( t2-t1 );
-    cout<<"optimization costs time: "<<time_used.count() <<" seconds."<<endl;
-
-    cout<<endl<<"after optimization:"<<endl;
-    cout<<"T="<<endl<<Eigen::Isometry3d ( pose->estimate() ).matrix() <<endl;
+            (
+                    ( p.x - K.at<double> ( 0,2 ) ) / K.at<double> ( 0,0 ),
+                    ( p.y - K.at<double> ( 1,2 ) ) / K.at<double> ( 1,1 )
+            );
 }
